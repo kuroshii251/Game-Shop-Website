@@ -8,7 +8,7 @@
     box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35);
     display: flex;
     flex-direction: column;
-    transition: 1s;
+    transition: width 1s, align-items 1s;
 }
 
 .sideMenu .logo {
@@ -41,14 +41,13 @@ text-transform: uppercase;
     display: inline-flex;
     align-items: center;
     gap: 25px;
-    transition: 0.5s;
     background: var(--bgColor);
     border-radius: 20px;
     padding: 10px 20px;
     width: 100%;
-    transition: 0.5s;
-
+    transition: box-shadow 0.5s;
 }
+
 
 .sideMenu .nav li a:hover,
 .sideMenu .nav li a.active {
@@ -91,16 +90,16 @@ transition: 0.3s;
 }
 
 .sideMenu.active {
-    with:7%;
-    transition: 1s;
+    width: 7%;
     overflow: hidden;
     align-items: center;
+    transition: width 1s, align-items 1s;
 }
 
-.sideMenu.active .brand,
-sideMenu.active.navName {
+.sideMenu.active .brand, .sideMenu.active .navName {
 display: none;
 }
+
 .sideMenu.active .nav li a {
 font-size: 1.8em;
 }

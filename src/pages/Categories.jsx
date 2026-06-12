@@ -41,7 +41,8 @@ const handleSearchGames = e => {
             <div className="col-lg-8 d-flex align-items-center justify-content-start">
                 <ul className="filters">
                     {filters.map(filter => (
-                        <li key={filter._id} className={`${filter.active ? 'active': undefined}`} onClick={() => handleFilterGames(filter.name)}>
+                        <li key={filter._id} className={filter.active ? 'active': undefined} onClick={() => handleFilterGames(filter.name)}>
+                            {filter.name}
                         </li>
                     ))}
                     </ul>

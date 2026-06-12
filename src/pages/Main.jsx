@@ -18,6 +18,11 @@ function Main(){
     const libraryRef = useRef();
     const bagRef = useRef();
 
+
+    const handleToggleActive = () => {
+    setActive(!active);
+    };
+    
     const sections = [
         {
         name: 'home',
@@ -43,9 +48,6 @@ function Main(){
     ];
 
 
-    const handleToggleActive = () => {
-    setActive(prev => !prev);
-    };
 
     const handleSectionActive = target => {
         sections.forEach(section => {

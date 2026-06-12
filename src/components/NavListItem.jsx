@@ -5,7 +5,7 @@ function NavListItem({ item, navOnClick }){
     return (
      <li>
 <a
-          href="#"
+          href="/"
           className={`${item.active ? 'active' : undefined}`}
           onClick={(e) => {
             e.preventDefault();

@@ -8,9 +8,16 @@ function Header({toggleActive}) {
     const {library, bag} = useContext(AppContext);
     return (
     <header>
-        <a href="/" className="menu" onClick={toggleActive}>
-            <i class="bi bi-sliders"></i>
-        </a>
+    <a
+    href="/"
+    className="menu"
+    onClick={(e) => {
+        e.preventDefault();
+        toggleActive();
+    }}
+>
+    <i className="bi bi-sliders"></i>
+</a>
     <div className="userItems">
         <a href="/" className="icon">
         <i class="bi bi-heart-fill"></i>

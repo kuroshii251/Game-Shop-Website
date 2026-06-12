@@ -14,38 +14,44 @@ function GameCard({game}) {
         setLibrary(library.filter(item => item._id !== game._id));
     };
 
-    const handleAddToBag = game => {
-        if(bag.includes(game)) return;
-        setBag([...bag, game]);
-    }
+   const handleAddToBag = game => {
+    if(bag.includes(game)) return;
+    const newBag = [...bag, game];
+    console.log('newBag:', newBag);
+    setBag(newBag);
+}
 
   return (
    <div className="col-xl-3 col-lg-4 col-md-6">
     <div className="gameCard">
         <img src={game.img} alt={game.title} className="img-fluid" />
-<a href="/" className={`like${library.includes(game) ? 'active' : undefined}`} onClick={library.includes(game) ? () => handleRemoveFromLibrary(game) : () => handleAddToLibrary(game)}>
+<a href="/" className="like" onClick={library.includes(game) ? () => handleRemoveFromLibrary(game) : () => handleAddToLibrary(game)}>
 <i className="bi bi-heart-fill"></i>
 </a>
-<div className="game Feature">
+
+<div className="gameFeature">
 <span className="gameType">{game.level}</span>
 <GameRating rating={game.rating}/>
 </div>
 <div className="gameTitle mt-4 mb-3">{game.title}</div>
 <div className="gamePrice">
     {game.discount !== 0 && (
-        <div>
+        <>
         <span className="discount">
         <i>{game.discount * 100}</i>
         </span>
         <span className='prevPrice'>${game.price.toFixed(2)}</span>
-  </div>
+  </>
 
     )}
     <span className="currentPrice">
         ${((1 - game.discount) * game.price).toFixed(2)}
     </span>
 </div>
-<a href="/" className='addBag' onClick={() => handleAddToBag(game)}>
+<a href="/" className='addBag' onClick={(e) => {
+    e.preventDefault();
+    handleAddToBag(game);
+}}>
     <i className="bi bi-bag-plus-fill"></i>
 </a>
     </div>

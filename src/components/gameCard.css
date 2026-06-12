@@ -19,15 +19,16 @@ height: 50%;
 width: 100%;
 }
 
-.gameCard .like {
+
+.gameCard .like{
 position: absolute;
 top: 24px;
 right: 19px;
 width: 40px;
-height: 40px;
-background: var(--bgColor);
+height: 40px;   
+background: #192938;
 padding: 5px;
-border-radius: 000 20px;
+border-radius: 0 0 0 20px;
 color: #ffffff;
 display: flex;
 justify-content: center;
@@ -35,12 +36,13 @@ align-items: center;
 transition: 0.3s;
 }
 
-.gameCard .like.active {
+.gameCard .like.active{
 color: var(--second);
 }
 
+
 .gameCard span {
-color:
+color: #ffffff;
 }
 
 .gameCard .gameFeature {
@@ -63,6 +65,7 @@ text-transform: uppercase;
 font-size: 1.3rem;
 color: #ffffff;
 }
+
 .gameCard .gamePrice {
 display: flex;
 align-items: center;
@@ -70,7 +73,7 @@ justify-content: space-between;
 flex-wrap: wrap;
 }
 
-gameCard .discount {
+.gameCard .discount {
 background: #ff0000;
 padding: 2px 5px;
 border-radius: 10px;
@@ -84,10 +87,13 @@ text-decoration-color: #ff0000;
 text-decoration-thickness: 3px;
 font-size: 0.8rem;
 }
+
 .gameCard .currentPrice {
 font-size: 1.2rem;
 font-weight: 800;
 }
+
+
 .gameCard .addBag {
 position: absolute;
 right: 0;

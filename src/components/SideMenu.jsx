@@ -16,9 +16,6 @@ function SideMenu({active, sectionActive}){
     sectionActive(target);
     }
    
-
- 
-
     return (
     <div className={`sideMenu ${active ? 'active' : undefined}`}>
         <a href="/" className="logo">
