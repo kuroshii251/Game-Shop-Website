@@ -1,0 +1,60 @@
+main {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+padding: 30px;
+border: 8px solid var(--bgColor);
+background:var(--bg-color);
+box-shadow: -5px 5px 15px rgba(255, 255, 255, 0.15), 5px 5px 15px rgba(0, 0, 0, 0.35),
+inset -5px -5px 15px rgba(255, 255, 255, 0.15), inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 30px;
+overflow: hidden;
+transition: 0.5s;
+}
+
+.banner {
+position: relative;
+width: 100%;
+height: 100%;
+overflow: hidden;
+border-radius: 30px;
+border: 1px solid rgba(0, 0, 0, 0.1);
+background: var(--bgColor);
+box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35);
+transition: 1s;
+}
+
+.banner.active {
+    position: relative;
+    width: 93%;
+    transition: 1s;
+}
+
+section {
+  position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    opacity: 0;
+    padding: 0 30px;
+    box-sizing: border-box;
+    transition: 1s ease-in-out;
+}
+
+section::-webkit-scrollbar {
+    display: none;
+}
+
+section.active {
+   top: 100px;
+    bottom: 20px;
+    opacity: 1;
+    overflow-y: auto;
+
+}
