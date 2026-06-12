@@ -41,7 +41,7 @@ function SideMenu({active, sectionActive}){
             </li>
               <li>
                 <a href="/">
-                <i className="bi bi-youtube-x"></i>
+                <i className="bi bi-youtube"></i>
                 </a>
             </li>
               <li>

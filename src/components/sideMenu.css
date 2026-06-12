@@ -64,6 +64,7 @@ list-style: none;
 gap: 20px;
 transition: 0.5s;
 }
+
 .sideMenu .social li a {
 text-decoration: none;
 color: #ffffff;
@@ -75,7 +76,7 @@ transition: 0.3s;
     color: var(--second);
 }
 
-.sideMenu .social li.share
+.sideMenu .social li .share
 {
 background: var(--second);
 padding: 10px;
@@ -103,6 +104,7 @@ display: none;
 .sideMenu.active .nav li a {
 font-size: 1.8em;
 }
+
 .sideMenu.active .social {
 padding: 0;
 flex-direction: column;
