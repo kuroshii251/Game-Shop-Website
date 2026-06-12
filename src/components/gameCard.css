@@ -55,14 +55,16 @@ background: var(--second);
 padding: 5px 10px;
 border-radius: 10px;
 font-weight: 400;
+font-size: 0.7rem;
 letter-spacing: 1px;
 }
 
 .gameCard .gameTitle {
 margin-top: 10px;
+
 font-family: 'Bauhaus 93';
 text-transform: uppercase;
-font-size: 1.3rem;
+font-size: 1rem; 
 color: #ffffff;
 }
 
@@ -107,7 +109,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 border-radius: 20px 0 20px 0;
-font-size: 1.2rem;
+font-size: 1rem;
 transition: 0.3s;
 }
 
